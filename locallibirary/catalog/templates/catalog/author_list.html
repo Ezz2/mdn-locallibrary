@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Authors List</h1>
+    <ul>
+        {% for author in author_list %}
+            <li>
+                <a href="{% url 'author-detail' author.pk %}">{{author}} ({{author.date_of_birth}} - )</a>
+            </li>
+        {% empty %}
+            <p>There is no authors</p>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'author-create' %}" class="btn btn-primary btn-sm">Create an author</a>
+{% endblock %}
