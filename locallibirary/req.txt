@@ -1,2 +1,0 @@
-name: mdn
-password: mdn123
