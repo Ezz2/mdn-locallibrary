@@ -123,9 +123,9 @@ class BookInstance(models.Model):
     class Meta:
         ordering = ['due_back']
 
-    # def __str__(self):
-    #     """String for representing the Model object."""
-    #     return f'{self.book.title} ({self.id})'
+    def __str__(self):
+        """String for representing the Model object."""
+        return f'{self.book.title} ({self.id})'
     
     @property
     def is_overdue(self):
@@ -151,4 +151,4 @@ class Author(models.Model):
 
     def __str__(self):
         """String for representing the Model object."""
-        return f'{self.first_name.capitalize()} {self.last_name}'
+        return f'{self.first_name.capitalize()}, {self.last_name}'
